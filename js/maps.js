@@ -9,8 +9,10 @@ function myMap() {
 
     $.getJSON("space_code_data.json", function (json) {
         let data = json;
+        var markersArray = [];
         $("#exampleFormControlSelect2").change(function (e) {
             const departament = e.target.value;
+
             for (let i = 0; i < data.length; i++) {
                 if (departament === data[i]['DEPARTMENT']) {
                     let departamento_coord = { 'lat': data[i]['LAT'], 'lng': data[i]['LNG'] }
@@ -24,11 +26,15 @@ function myMap() {
                         index: data[i]['DEPARTMENT'],
                         position: departamento_coord,
                         icon: pinAzul,
+                        draggable: false,
+                        animation: google.maps.Animation.DROP,
                         map: map,
                         label: data[i]['DEPARTMENT'].toUpperCase(),
                     });
 
-                    const cityCircle = new google.maps.Circle({
+                    markersArray.push(marker);
+
+                    new google.maps.Circle({
                         strokeColor: "#80ffbbe7",
                         strokeOpacity: 0.8,
                         strokeWeight: 2,
@@ -55,9 +61,25 @@ function myMap() {
                         }
                     });
 
-                    marker.addListener("click", (e) => {
-                        $('#modals-info').append(`
-                        <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+                    marker.addListener('click', (function (index) {
+                        return function () {
+                            clickMarkerEvent(index, markersArray, data);
+                        };
+                    })(markersArray.length - 1));
+                }
+            }
+        });
+    });
+}
+
+
+function clickMarkerEvent(index, markersArray, data) {
+    let departament = markersArray[index].index
+    for (let i = 0; i < data.length; i++) {
+        if (departament === data[i]['DEPARTMENT']) {
+            $('#modals-info').empty();
+            $('#modals-info').append(`
+            <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
@@ -92,6 +114,7 @@ function myMap() {
                             </div>
                            </div> 
                             <h5>Indexes EJ:</h5>
+                            <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -131,8 +154,10 @@ function myMap() {
                                         
                                     </tbody>
                                 </table>
+                                </div>
                                 <hr>
                                 <h5>Indices processed from Indexes EJ (Percentile):</h5>
+                                <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -171,18 +196,16 @@ function myMap() {
                                         </tr>
                                     </tbody>
                                 </table>
+                                </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        `);
-                        $('#staticBackdrop').modal('show');
-                    });
 
-                    //break;
-                }
-            }
-        });
-    });
+                </div>
+            `);
+            $('#staticBackdrop').modal('show');
+            break;
+        }
+    }
 
 }
