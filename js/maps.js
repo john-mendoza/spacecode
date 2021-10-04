@@ -104,7 +104,7 @@ function clickMarkerEvent(index, markersArray, data) {
 
                             </div>
                            </div> 
-                            <h5>Indexes Environmental justice (EJ):</h5>
+                            <h5>Environmental Justice Indices (EJ Indices):</h5>
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
@@ -147,7 +147,7 @@ function clickMarkerEvent(index, markersArray, data) {
                                 </table>
                                 </div>
                                 <hr>
-                                <h5>Indices processed from Indexes EJ (Percentile):</h5>
+                                <h5>New indices processed from EJ Indices (Percentile):</h5>
                                 <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
