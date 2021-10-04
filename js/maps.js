@@ -56,6 +56,7 @@ function myMap() {
                     });
 
                     marker.addListener("click", (e) => {
+                        $('#modals-info').empty();
                         $('#modals-info').append(`
                         <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
