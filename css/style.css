@@ -88,7 +88,6 @@ select{
 }
 
 .modal-dialog {
-    border: 0.1rem solid rgb(66, 255, 161);
     border-radius: 5px;
 }
 
