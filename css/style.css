@@ -73,6 +73,24 @@ button:focus {
     height: 100%;
 }
 
+.modal-header{
+    text-align: center;
+    background-color: rgb(66, 255, 161);
+    color: rgb(15, 8, 44);
+}
+
+b, th{
+    color: rgb(87, 98, 255);
+}
+
+select{
+    color: rgb(87, 98, 255) !important;
+}
+
+.modal-dialog {
+    border: 0.1rem solid rgb(66, 255, 161);
+    border-radius: 5px;
+}
 
 .section {
     position: relative;
