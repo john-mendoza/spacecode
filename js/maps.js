@@ -109,12 +109,12 @@ function clickMarkerEvent(index, markersArray, data) {
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#INDEX_EJ</th>
-                                            <th scope="col">Value</th>
-                                            <th scope="col">#INDEX_EJ</th>
-                                            <th scope="col">Value</th>
-                                            <th scope="col">#INDEX_EJ</th>
-                                            <th scope="col">Value</th>
+                                            <th scope="col">EJ_INDEX</th>
+                                            <th scope="col">VALUE</th>
+                                            <th scope="col">EJ_INDEX</th>
+                                            <th scope="col">VALUE</th>
+                                            <th scope="col">EJ_INDEX</th>
+                                            <th scope="col">VALUE</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -152,12 +152,12 @@ function clickMarkerEvent(index, markersArray, data) {
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
-                                            <th scope="col">#INDEX_EJ</th>
-                                            <th scope="col">Value</th>
-                                            <th scope="col">#INDEX_EJ</th>
-                                            <th scope="col">Value</th>
-                                            <th scope="col">#INDEX_EJ</th>
-                                            <th scope="col">Value</th>
+                                            <th scope="col">EJ_INDEX</th>
+                                            <th scope="col">VALUE</th>
+                                            <th scope="col">EJ_INDEX</th>
+                                            <th scope="col">VALUE</th>
+                                            <th scope="col">EJ_INDEX</th>
+                                            <th scope="col">VALUE</th>
                                         </tr>
                                     </thead>
                                     <tbody>
