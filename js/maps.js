@@ -29,11 +29,10 @@ function myMap() {
                         draggable: false,
                         animation: google.maps.Animation.DROP,
                         map: map,
-                        label: data[i]['DEPARTMENT'].toUpperCase(),
+                        label: data[i]['DEPARTMENT'].toUpperCase()+' - '+'CLICK HERE',
                     });
 
                     markersArray.push(marker);
-
                     new google.maps.Circle({
                         strokeColor: "#80ffbbe7",
                         strokeOpacity: 0.8,
@@ -62,6 +61,7 @@ function myMap() {
                     });
 
                     marker.addListener('click', (function (index) {
+                        marker.setAnimation(google.maps.Animation.BOUNCE);
                         return function () {
                             clickMarkerEvent(index, markersArray, data);
                         };
@@ -83,8 +83,8 @@ function clickMarkerEvent(index, markersArray, data) {
             aria-labelledby="staticBackdropLabel" aria-hidden="true">
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="staticBackdropLabel"><b>Country: Perú</b> | <b>Departament:</b> ${data[i].DEPARTMENT.toUpperCase()} | <b>Population:</b> ${data[i].POPULATION}</h5>
+                    <div class="modal-header text-center">
+                        <h5 class="modal-title" id="staticBackdropLabel"><b>Country: </b>Perú | <b>Departament:</b> ${data[i].DEPARTMENT.toUpperCase()} | <b>Population:</b> ${data[i].POPULATION}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -92,25 +92,16 @@ function clickMarkerEvent(index, markersArray, data) {
                     <div class="modal-body">
                         <div class="row">
                             <div class="col-md-6">
-                                <h6><b>GENERAL DATA:</b></h6>
                                 <b>COORDS:</b> Lat: ${data[i].LAT}, Lng: ${data[i].LNG}<br>
                                 <b>PORC_MINOR:</b> ${data[i].PORC_MINOR}%<br>
                                 <b>PORC_LOW_INCOME:</b> ${data[i].PORC_LOW_INCOME}%<br>
                                 <b>DEMOGRAPHIC_INDEX:</b> ${data[i].DEMOGRAPHIC_INDEX}<br>
-                                <img src="${data[i].image_url}" width="30%" alt="${data[i].DEPARTMENT.toUpperCase()}">
-                                <b>AREA:</b> ${data[i].AREA} km2
+                                <b>AREA:</b> ${data[i].AREA} km2 <br>
+                                <a style="color:rgb(15, 8, 44); font-size: 1.2rem" href="https://static-media-files-ianalytycs.sfo3.digitaloceanspaces.com/spaceCODE/leyenda_data.jpg" target='_blank'><u>Leyend Indexes EJ <i class="fas fa-external-link-alt"></i></u></a>
                             </div>
-                            <div class="col-md-6">
-                            <div class="work_img_box rounded">
-                        <a class="img-zoom" target='_blank' href="https://static-media-files-ianalytycs.sfo3.digitaloceanspaces.com/spaceCODE/leyenda_data.jpg"></a>
-                        <div class="work_images">
-                            <img src="https://static-media-files-ianalytycs.sfo3.digitaloceanspaces.com/spaceCODE/leyenda_data.jpg" alt="image" class="img-fluid mx-auto d-block">
-                            <div class="work_overlay">
-                                <h4>INDEX_EJ: ${data[i].DEPARTMENT.toUpperCase()}</h4>
-                                <h6>Legend</h6>
-                            </div>
-                        </div>
-                    </div>
+                            <div class="col-md-6 text-center">
+                            <img style="border: 2px solid rgb(15, 8, 44); border-radius:5px" src="${data[i].image_url}" width="40%" alt="${data[i].DEPARTMENT.toUpperCase()}">
+
                             </div>
                            </div> 
                             <h5>Indexes EJ:</h5>
