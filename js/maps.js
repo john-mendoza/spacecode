@@ -104,7 +104,7 @@ function clickMarkerEvent(index, markersArray, data) {
 
                             </div>
                            </div> 
-                            <h5>Indexes EJ:</h5>
+                            <h5>Indexes Environmental justice (EJ):</h5>
                             <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
