@@ -84,7 +84,7 @@ function clickMarkerEvent(index, markersArray, data) {
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header text-center">
-                        <h5 class="modal-title" id="staticBackdropLabel"><b>Country: </b>Perú | <b>Departament:</b> ${data[i].DEPARTMENT.toUpperCase()} | <b>Population:</b> ${data[i].POPULATION}</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel"><b>Country: </b>Perú | <b>Department:</b> ${data[i].DEPARTMENT.toUpperCase()} | <b>Population:</b> ${data[i].POPULATION}</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
