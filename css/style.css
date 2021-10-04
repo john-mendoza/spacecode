@@ -73,14 +73,17 @@ button:focus {
     height: 100%;
 }
 
-.modal-header{
-    text-align: center;
-    background-color: rgb(66, 255, 161);
-    color: rgb(15, 8, 44);
-}
-
 b, th{
     color: rgb(87, 98, 255);
+}
+
+thead{
+    background-color: rgb(87, 98, 255);
+    color: white !important;
+}
+
+thead th{
+    color: white !important;
 }
 
 select{
