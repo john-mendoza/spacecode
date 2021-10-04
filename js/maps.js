@@ -92,6 +92,7 @@ function myMap() {
                             </div>
                            </div> 
                             <h5>Indexes EJ:</h5>
+                            <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -131,8 +132,10 @@ function myMap() {
                                         
                                     </tbody>
                                 </table>
+                                </div>
                                 <hr>
                                 <h5>Indices processed from Indexes EJ (Percentile):</h5>
+                                <div class="table-responsive">
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -171,6 +174,7 @@ function myMap() {
                                         </tr>
                                     </tbody>
                                 </table>
+                                </div>
                                         </div>
                                     </div>
                                 </div>
