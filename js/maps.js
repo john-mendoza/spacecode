@@ -97,7 +97,7 @@ function clickMarkerEvent(index, markersArray, data) {
                                 <b>PORC_LOW_INCOME:</b> ${data[i].PORC_LOW_INCOME}%<br>
                                 <b>DEMOGRAPHIC_INDEX:</b> ${data[i].DEMOGRAPHIC_INDEX}<br>
                                 <b>AREA:</b> ${data[i].AREA} km2 <br>
-                                <a style="color:rgb(15, 8, 44); font-size: 1.2rem" href="https://static-media-files-ianalytycs.sfo3.digitaloceanspaces.com/spaceCODE/leyenda_data.jpg" target='_blank'><u>Leyend Indexes EJ <i class="fas fa-external-link-alt"></i></u></a>
+                                <a style="color:rgb(15, 8, 44); font-size: 1.2rem" href="https://static-media-files-ianalytycs.sfo3.digitaloceanspaces.com/spaceCODE/leyenda_data.jpg" target='_blank'><u>Legend of EJ indices <i class="fas fa-external-link-alt"></i></u></a>
                             </div>
                             <div class="col-md-6 text-center">
                             <img style="border: 2px solid rgb(15, 8, 44); border-radius:5px" src="${data[i].image_url}" width="40%" alt="${data[i].DEPARTMENT.toUpperCase()}">
